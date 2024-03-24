@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'django.contrib.gis',
     'swip',
+    
 ]
 
 REST_FRAMEWORK = {
@@ -147,6 +149,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
+GDAL_LIBRARY_PATH = '/usr/lib/libgdal.so.30'
 
 
 
