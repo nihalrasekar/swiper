@@ -11,7 +11,7 @@ urlpatterns = [
     path('send-message/', SendMessage.as_view(), name='send_message'),
     path('upload-daily-status/', DailyStatusMediaUpload.as_view(), name='upload_daily_status'),
     path('user-chat-rooms/', UserChatRooms.as_view(), name='user_chat_rooms'),
-    path('chat-room-messages/<int:chat_id>/', ChatRoomMessages.as_view(), name='chat_room_messages'),
+    #path('chat-room-messages/<int:chat_id>/', ChatRoomMessages.as_view(), name='chat_room_messages'),
     path('send-message/', SendMessageToChatRoom.as_view(), name='send_message_to_chat_room'),
     path('profiles/<int:profile_id>/like-super-like/', LikeSuperLikeView.as_view()),
     path('user-profile/', UserProfileView.as_view(), name='user_profile'),

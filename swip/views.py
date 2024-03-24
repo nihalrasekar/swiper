@@ -13,7 +13,7 @@ from django.db.models import Q
 from django.contrib.sessions.backends.db import SessionStore
 from django.http import HttpRequest
 from django.shortcuts import get_object_or_404
-from rest_framework.generics import RetrieveUpdateAPIView
+from rest_framework.generics import RetrieveUpdateAPIView,RetrieveAPIView
 class UserRegistration(APIView):
     def post(self, request):
         username = request.data.get('username')
@@ -235,3 +235,10 @@ class UserProfileView(RetrieveUpdateAPIView):
 
     def get_object(self):
         return self.queryset.get(user=self.request.user)
+    
+class ProfileView(RetrieveAPIView):
+    serializer_class = ProfileSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        return self.request.user.profile
