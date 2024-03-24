@@ -1,6 +1,6 @@
 from django.urls import path
 from django.conf.urls.static import static
-from.views import TokenView,UserRegistration,OptionsMatches,SendMessage,DailyStatusMediaUpload,UserChatRooms,ChatRoomMessages, SendMessageToChatRoom,LikeSuperLikeView,UserProfileView,ProfileView
+from.views import TokenView,UserRegistration,OptionsMatches,SendMessage,DailyStatusMediaUpload,UserChatRooms, SendMessageToChatRoom,LikeSuperLikeView,UserProfileView,ProfileView
 from django.conf import settings
 
 urlpatterns = [
